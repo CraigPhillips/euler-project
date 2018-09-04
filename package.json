@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "",
   "main": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "euler": "node --experimental-modules --no-warnings src"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CraigPhillips/euler-project.git"
