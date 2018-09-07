@@ -28,5 +28,5 @@ export function sumMultiplesUnderCap(values, cap) {
 }
 
 export default function solve() {
-  console.log(sumMultiplesUnderCap([3, 5], 1000));
+  return sumMultiplesUnderCap([3, 5], 1000);
 }
