@@ -28,5 +28,8 @@ export function sumMultiplesUnderCap(values, cap) {
 }
 
 export default function solve() {
-  return sumMultiplesUnderCap([3, 5], 1000);
+  const threeAndFive = [3, 5];
+  const oneThousand = 1000;
+
+  return sumMultiplesUnderCap(threeAndFive, oneThousand);
 }
