@@ -1,3 +1,5 @@
+export const answer = 233168;
+
 export function getMultiplesUnderCap(values, cap) {
   const multiples = {};
 
@@ -19,7 +21,7 @@ export function sumMultiplesUnderCap(values, cap) {
     .reduce((soFar, nextVal) => soFar + nextVal, 0);
 }
 
-export default function solve() {
+export function solve() {
   const threeAndFive = [3, 5];
   const oneThousand = 1000;
 

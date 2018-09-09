@@ -18,12 +18,13 @@ try {
   while (problem.length < 5) problem = `0${problem}`;
   problem = `problem${problem}`;
   if (!solutions[problem]) throw new Error(`no solution for ${problem}`);
-  if (typeof solutions[problem] !== 'function') {
+  if (typeof solutions[problem].solve !== 'function') {
+    console.log(solutions[problem]);
     throw new Error(`solution for ${problem} is not a function`);
   }
 
   log.trace({ problem }, 'running solution...');
-  const result = solutions[problem]();
+  const result = solutions[problem].solve();
   log.info({ problem, result }, 'solution finished');
 } catch (error) {
   (log || console).error(error, 'run failed');
