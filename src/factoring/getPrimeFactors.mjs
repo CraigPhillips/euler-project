@@ -3,14 +3,14 @@ export default function getPrimeFactors(num) {
     throw new Error(`${num} is not a positive integer`);
   }
 
-  const primesOtherThan1 = [];
-  const primeFactors = { 1: 1 };
+  const primes = [];
+  const primeFactors = {};
   let remainingToFactor = num;
 
   for (let i = 2; i <= remainingToFactor; i += 1) {
-    const isPrime = !primesOtherThan1.some(prime => i % prime === 0);
+    const isPrime = !primes.some(prime => i % prime === 0);
     if (isPrime) {
-      primesOtherThan1.push(i);
+      primes.push(i);
 
       if (remainingToFactor % i === 0) {
         primeFactors[i] = 0;
