@@ -8,6 +8,7 @@ import * as problem00007 from './00007';
 import * as problem00008 from './00008';
 import * as problem00009 from './00009';
 import * as problem00010 from './00010';
+import * as problem00011 from './00011';
 
 export default {
   problem00001,
@@ -20,4 +21,5 @@ export default {
   problem00008,
   problem00009,
   problem00010,
+  problem00011,
 };
