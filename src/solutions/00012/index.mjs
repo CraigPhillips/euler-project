@@ -1,27 +1,23 @@
+import getPrimeFactors from '../../factoring/getPrimeFactors';
+
 export const answer = 76576500;
-
-export function getAllFactors(n) {
-  const factors = {};
-
-  for (let i = 1; i <= Math.ceil(Math.sqrt(n)); i += 1) {
-    if (n % i === 0) {
-      factors[i] = true;
-      factors[n / i] = true;
-    }
-  }
-
-  return Object.keys(factors);
-}
 
 export function getFirstTriangularNumberWithFactorCountOver(n) {
   let nextTriangular = 0;
   let triangularCount = 0;
-  let factors = [];
+  let factorCount = 0;
+  let factors;
 
-  while (factors.length <= n) {
+  while (factorCount <= n) {
     triangularCount += 1;
     nextTriangular += triangularCount;
-    factors = getAllFactors(nextTriangular);
+    // stolen from https://projecteuler.net/overview=012
+    // the idea is that you can get the number of factors in a number by
+    // getting the prime factors and then counting how many times each of those
+    // prime factors are used
+    const primeFactors = getPrimeFactors(nextTriangular);
+    factorCount = Object.values(primeFactors)
+      .reduce((soFar, count) => soFar * (count + 1), 1);
   }
 
   return { factors, number: nextTriangular, triangularCount };
