@@ -1,6 +1,6 @@
 import GraphNode from '../../data-structures/GraphNode';
 
-export const answer = -1;
+export const answer = 137846528820;
 
 export function buildLatticeGraph(width, height = width) {
   const graphNodes = [];
@@ -12,6 +12,7 @@ export function buildLatticeGraph(width, height = width) {
       const node = new GraphNode();
       if (col > 0) node.connectToAndFrom(graphNodes[row][col - 1]);
       if (row > 0) node.connectToAndFrom(graphNodes[row - 1][col]);
+      node.position = `(${col}, ${row})`;
       graphNodes[row].push(node);
     }
   }
@@ -19,39 +20,43 @@ export function buildLatticeGraph(width, height = width) {
   return {
     bottomRightNode: graphNodes[width - 1][height - 1],
     graphNodes,
+    topLeftNode: graphNodes[0][0],
   };
 }
 
 export function solve() {
-  const twentyByTwentySquaresInGrid = 2;
+  const twentyByTwentySquaresInGrid = 20;
   // considers each corner to be a vertex so there is one more row and column
   // of vertices than there are squares in the graph
   const graph = buildLatticeGraph(twentyByTwentySquaresInGrid + 1);
-  let nextNodesToProcess = [graph.bottomRightNode];
-  graph.bottomRightNode.value = 1;
+  let nextNodes = [graph.bottomRightNode];
 
-  while (nextNodesToProcess.length > 0) {
-    const theseNodes = nextNodesToProcess;
-    nextNodesToProcess = [];
+  const addDestNodeToNextListIfNotPresent = (edge) => {
+    if (!nextNodes.some(n => n.position === edge.destination.position)) {
+      nextNodes.push(edge.destination);
+    }
+  };
+
+  while (nextNodes.length > 0) {
+    const theseNodes = nextNodes;
+    nextNodes = [];
 
     for (let i = 0; i < theseNodes.length; i += 1) {
       theseNodes[i].value = theseNodes[i]
         .edges
         .filter(edge => edge.destination.value !== undefined)
-        .reduce((sum, edge) => sum + edge.destination.value, 0);
+        // the "|| 1" portion addresses the starting vertex only and
+        // works as initialization value for counting the other paths
+        .reduce((sum, edge) => sum + edge.destination.value, 0) || 1;
     }
 
     for (let i = 0; i < theseNodes.length; i += 1) {
       theseNodes[i]
         .edges
         .filter(edge => edge.destination.value === undefined)
-        .forEach((edge) => {
-          if (nextNodesToProcess.indexOf(edge.destination) === -1) {
-            nextNodesToProcess.push(edge.destination)
-          }
-        });
+        .forEach(addDestNodeToNextListIfNotPresent);
     }
   }
 
-  return -1;
+  return graph.topLeftNode.value;
 }
