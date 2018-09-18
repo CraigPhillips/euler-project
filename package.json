@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "euler": "node --experimental-modules --no-warnings src",
-    "test": "jest"
+    "test": "jest -o --verbose",
+    "test-all": "jest --verbose"
   },
   "repository": {
     "type": "git",
