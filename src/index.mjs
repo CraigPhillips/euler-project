@@ -19,7 +19,6 @@ try {
   problem = `problem${problem}`;
   if (!solutions[problem]) throw new Error(`no solution for ${problem}`);
   if (typeof solutions[problem].solve !== 'function') {
-    console.log(solutions[problem]);
     throw new Error(`solution for ${problem} is not a function`);
   }
 
