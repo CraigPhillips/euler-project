@@ -1,5 +1,7 @@
+import getAllFactors from '../../factoring/getAllFactors';
+
 export const answer = -1;
 
 export function solve() {
-  return -1;
+  return getAllFactors(600);
 }
