@@ -1,4 +1,4 @@
-import GraphNode from '../../data-structures/GraphNode';
+import GraphNode from '../../../../data-structures/GraphNode';
 
 export const answer = 137846528820;
 
