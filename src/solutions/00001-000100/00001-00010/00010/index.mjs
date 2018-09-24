@@ -1,4 +1,4 @@
-import getPrimesUnder from '../../primes/getPrimesUnder';
+import getPrimesUnder from '../../../../primes/getPrimesUnder';
 
 export const answer = 142913828922;
 

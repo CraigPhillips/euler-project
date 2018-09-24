@@ -1,4 +1,4 @@
-import getPrimes from '../../primes/getPrimes';
+import getPrimes from '../../../../primes/getPrimes';
 
 export const answer = 104743;
 

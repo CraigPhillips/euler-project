@@ -1,5 +1,5 @@
 import numbers from './bigNumberList';
-import { addStrings } from '../../string-math';
+import { addStrings } from '../../../../string-math';
 
 export const answer = 5537376230;
 

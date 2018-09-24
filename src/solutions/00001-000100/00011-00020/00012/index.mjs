@@ -1,4 +1,4 @@
-import getPrimeFactors from '../../factoring/getPrimeFactors';
+import getPrimeFactors from '../../../../factoring/getPrimeFactors';
 
 export const answer = 76576500;
 

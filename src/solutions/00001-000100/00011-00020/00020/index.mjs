@@ -1,4 +1,4 @@
-import { multiplyStrings } from '../../string-math';
+import { multiplyStrings } from '../../../../string-math';
 
 export const answer = 648;
 
