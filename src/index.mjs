@@ -4,7 +4,6 @@ import yargs from 'yargs';
 
 import solutions from './solutions';
 
-
 let log;
 try {
   log = bunyan.createLogger({
