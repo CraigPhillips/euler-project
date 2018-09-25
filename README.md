@@ -69,6 +69,16 @@ can't find the [Git][6] settings, you'll see something that looks like:
 ```
 No tests found related to files changed since last commit.
 Run Jest without `-o` or with `--all` to run all tests.
+
+```
+
+## Linting
+This repository is configured to use [ESLint][11] to statically analyze all
+code for adherence to standard [Node][2] best practices. If you are not using
+an editor to automatically lint code as changes are made, you can manually
+execute [ESLint][11] by running:
+```
+npm run lint
 ```
 
 ## Change log
@@ -96,3 +106,4 @@ Thanks! Thanks! Thanks!
 [8]:https://nodejs.org/api/esm.html
 [9]:./CHANGELOG.md
 [10]:https://keepachangelog.com/en/1.0.0/
+[11]:https://eslint.org/

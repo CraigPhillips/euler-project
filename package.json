@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "euler": "node --experimental-modules --no-warnings src",
+    "lint": "eslint src/**/**.mjs",
     "test": "jest --verbose",
     "test-changed": "jest -o --verbose"
   },
