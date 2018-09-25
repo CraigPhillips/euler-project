@@ -10,7 +10,7 @@ found here to solve one of the problems can greatly hinder that process.
 ## Prerequisites
 To run any of the solutions in this repository, you'll need a system with
 [Node][2] v8.10.0 or later available as well as [NPM][3] v6.4.1 or later. Most
-of  the codebase uses experimental ECMAScript modules (in `.mjs` files) so
+of  the codebase uses experimental [ECMAScript modules][8] (in `.mjs` files) so
 whichever version of [Node][2] you've got installed most have those available
 via the `--experimental-modules` flag.
 
@@ -18,7 +18,7 @@ via the `--experimental-modules` flag.
 To follow any of the instructions below, you will first need to install this
 project's dependencies:
 
-1. Clone this repository and open a command prompt to the resulting directory.
+1. Clone this repository and open a command prompt to the resulting directory
 1. Run `npm i` to retrieve all dependencies
 
 ## Running solutions to individual problems
@@ -26,7 +26,7 @@ An [NPM script][4] is available to trigger the execution of the solution to
 individual problems. To use this script, you will simply need to know the
 number of the problem as presented on the [Project Euler site][1].
 
-With that in hand, consider problem 5 which reads:
+Consider problem 5 which reads:
 
 ```
 2520 is the smallest number that can be divided by each of the numbers from 1 to
@@ -78,7 +78,9 @@ The source found in this repository can be used under the open source
 ## Acknowledgements
 Many thanks to the proprietors and contributers of Project Euler. It is a great
 collection of puzzles and the length of time over which they've maintained
-and expanded on the site is impressive. Thanks! Thanks! Thanks!
+and expanded on the site is impressive.
+
+Thanks! Thanks! Thanks!
 
 [1]:https://projecteuler.net/about
 [2]:https://nodejs.org/en/
@@ -87,3 +89,4 @@ and expanded on the site is impressive. Thanks! Thanks! Thanks!
 [5]:https://jestjs.io/
 [6]:https://git-scm.com/downloads
 [7]:https://opensource.org/licenses/MIT
+[8]:https://nodejs.org/api/esm.html
