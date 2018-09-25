@@ -64,12 +64,26 @@ npm run test-changed
 ```
 
 Note that if you have not made any changes to the files in this repository,
-don't have [Git][6] installed, or have someone otherwise made it so [Jest][5]
+don't have [Git][6] installed, or have somehow otherwise made it so [Jest][5]
 can't find the [Git][6] settings, you'll see something that looks like:
 ```
 No tests found related to files changed since last commit.
 Run Jest without `-o` or with `--all` to run all tests.
+
 ```
+
+## Linting
+This repository is configured to use [ESLint][11] to statically analyze all
+code for adherence to standard [Node][2] best practices. If you are not using
+an editor to automatically lint code as changes are made, you can manually
+execute [ESLint][11] by running:
+```
+npm run lint
+```
+
+## Change log
+A list of changes for each released version can be found in this project's
+[CHANGELOG][9] which follows the conventions outlined [here][10].
 
 ## License
 The source found in this repository can be used under the open source
@@ -88,5 +102,8 @@ Thanks! Thanks! Thanks!
 [4]:https://docs.npmjs.com/misc/scripts
 [5]:https://jestjs.io/
 [6]:https://git-scm.com/downloads
-[7]:https://opensource.org/licenses/MIT
+[7]:./LICENSE
 [8]:https://nodejs.org/api/esm.html
+[9]:./CHANGELOG.md
+[10]:https://keepachangelog.com/en/1.0.0/
+[11]:https://eslint.org/

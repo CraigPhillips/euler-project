@@ -1,10 +1,11 @@
 {
   "name": "euler-project",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
     "euler": "node --experimental-modules --no-warnings src",
+    "lint": "eslint src/**/**.mjs",
     "test": "jest --verbose",
     "test-changed": "jest -o --verbose"
   },
