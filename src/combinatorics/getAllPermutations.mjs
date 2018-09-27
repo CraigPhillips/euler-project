@@ -1,4 +1,4 @@
-function getAllCombinationsOfLengthFrom(
+function getAllPermutationsOfLengthFrom(
   set,
   length,
   startI = 0,
@@ -7,7 +7,7 @@ function getAllCombinationsOfLengthFrom(
   const combinations = [];
 
   for (let i = startI; i < set.length - (length - 1); i += 1) {
-    const subSets = getAllCombinationsOfLengthFrom(set, length - 1, i + 1);
+    const subSets = getAllPermutationsOfLengthFrom(set, length - 1, i + 1);
     for (let j = 0; j < subSets.length; j += 1) {
       const thisSubSet = subSets[j];
       combinations.push([set[i]].concat(thisSubSet));
@@ -16,10 +16,10 @@ function getAllCombinationsOfLengthFrom(
   return combinations;
 }
 
-export default function getAllCombinations(set) {
+export default function getAllPermutations(set) {
   let combinations = [];
   for (let i = 0; i <= set.length; i += 1) {
-    combinations = combinations.concat(getAllCombinationsOfLengthFrom(set, i));
+    combinations = combinations.concat(getAllPermutationsOfLengthFrom(set, i));
   }
   return combinations;
 }
