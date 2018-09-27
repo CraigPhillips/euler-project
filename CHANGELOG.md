@@ -1,12 +1,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog][6], and this project adheres to
+[Semantic Versioning][5].
 
 ## [Unreleased]
 ### Added
-- solution to problem 22
+- solutions to problems 22-23
+
+### Changed
+- improved find all factors method by eliminating prime factor lookup
 
 ## [1.0.0] - 2018-09-25
 ### Added
@@ -29,3 +32,5 @@ sections
 [2]:https://www.npmjs.com/
 [3]:https://eslint.org/
 [4]:https://babeljs.io/
+[5]:https://semver.org/spec/v2.0.0.html
+[6]:https://keepachangelog.com/en/1.0.0/
