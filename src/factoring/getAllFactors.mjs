@@ -1,20 +1,15 @@
-import getAllCombinations from '../combinatorics/getAllCombinations';
-import getPrimeFactors from './getPrimeFactors';
-
 export default function getAllFactors(num) {
-  const factors = {};
-  const primeFactors = getPrimeFactors(num);
-  const allPrimeFactorCombos = getAllCombinations(
-    Object.entries(primeFactors).reduce((setSoFar, [factor, count]) => {
-      const parsedFactor = parseInt(factor, 10);
-      for (let i = 0; i < count; i += 1) setSoFar.push(parsedFactor);
-      return setSoFar;
-    }, []),
-  );
-  allPrimeFactorCombos.forEach((combo) => {
-    const product = combo.reduce((soFar, n) => n * soFar, 1);
-    factors[product] = true;
-  });
+  const factors = [1];
+  const reverseFactors = [num];
+  const sqrt = Math.sqrt(num);
 
-  return Object.keys(factors).map(f => parseInt(f, 10));
+  for (let i = 2; i <= sqrt; i += 1) {
+    if (num % i === 0) {
+      factors.push(i);
+
+      if (i !== sqrt) reverseFactors.push(num / i);
+    }
+  }
+
+  return factors.concat(reverseFactors.reverse());
 }
