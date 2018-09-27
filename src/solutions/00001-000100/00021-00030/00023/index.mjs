@@ -27,6 +27,7 @@ export function getAbundancyCategoriesUpTo(cap) {
 export function solve() {
   const maxProvableNonAbundantSum = 28123;
   const { abundant } = getAbundancyCategoriesUpTo(maxProvableNonAbundantSum);
+
   const isAbundantSummable = [];
   for (let i = 0; i < abundant.length; i += 1) {
     for (let j = i; j < abundant.length; j += 1) {
