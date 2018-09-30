@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
-- solutions to problems 22-23
+- solutions to problems 22-24
 
 ### Changed
 - improved find all factors method by eliminating prime factor lookup
