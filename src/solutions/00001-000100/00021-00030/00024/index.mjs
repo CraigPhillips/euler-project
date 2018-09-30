@@ -1,4 +1,4 @@
-import getNext from '../../../../combinatorics/getNextLexographicPermutation';
+import { getNextLexographicPermutation } from '../../../../combinatorics';
 
 export const answer = 2783915460;
 
@@ -7,7 +7,7 @@ export function solve() {
   const millionthPermutation = 1000000;
 
   for (let i = 1; i < millionthPermutation; i += 1) {
-    nextPermutation = getNext(nextPermutation);
+    nextPermutation = getNextLexographicPermutation(nextPermutation);
   }
 
   return parseInt(nextPermutation, 10);
