@@ -11,7 +11,7 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ### Changed
 - improved find all factors method by eliminating prime factor lookup
-- simplified access to utility methods by adding idnex files
+- simplified access to utility methods by adding index files
 
 ## [1.0.0] - 2018-09-25
 ### Added
