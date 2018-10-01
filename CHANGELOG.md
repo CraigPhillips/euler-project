@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
-- solutions to problems 22-24
+- solutions to problems 22-25
 - utility function for finding next lexographic permutation of a string
 
 ### Changed
