@@ -1,4 +1,4 @@
-import getAllFactors from '../../../../factoring/getAllFactors';
+import { getAllFactors } from '../../../../factoring';
 
 export const answer = 31626;
 
