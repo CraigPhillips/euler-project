@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
+- nothing yet
+
+### Changed
+- nothing yet
+
+## [1.1.0]
+### Added
 - solutions to problems 22-26
 - utility function for finding next lexographic permutation of a string
 
