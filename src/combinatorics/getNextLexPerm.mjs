@@ -31,7 +31,7 @@ export default function getNextLexographicPermutation(start) {
 
   const needsSort = chars.splice(firstDecI + 1, length);
   needsSort.sort();
-  needsSort.forEach(char => chars.push(char));
+  needsSort.forEach((char) => chars.push(char));
 
   return chars.join('');
 }

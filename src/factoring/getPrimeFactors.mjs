@@ -11,7 +11,7 @@ export default function getPrimeFactors(num) {
 
   for (let i = 2; i <= remainingToFactor; i += 1) {
     const isPrime = primeCache[i]
-      || !primeCacheList.some(prime => i % prime === 0);
+      || !primeCacheList.some((prime) => i % prime === 0);
     if (isPrime) {
       if (!primeCache[i]) {
         primeCache[i] = true;
