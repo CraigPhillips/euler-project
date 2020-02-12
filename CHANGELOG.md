@@ -6,10 +6,10 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
-- nothing yet
+- solutions to problems 27-28
 
 ### Changed
-- nothing yet
+- tweaks to combinatoric, factoring and prime helper logic for linter errors
 
 ## [1.1.0]
 ### Added
