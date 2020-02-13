@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
-- solutions to problems 27-29
+- solutions to problems 27-30
 
 ### Changed
 - tweaks to combinatoric, factoring and prime helper logic for linter errors
