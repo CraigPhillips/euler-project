@@ -6,12 +6,19 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
-- nothing yet
+- (nothing yet)
 
 ### Changed
-- nothing yet
+- (nothing yet)
 
-## [1.1.0]
+## [1.2.0] - 2020-02-13
+### Added
+- solutions to problems 27-30
+
+### Changed
+- tweaks to combinatoric, factoring and prime helper logic for linter errors
+
+## [1.1.0] - 2019-01-13
 ### Added
 - solutions to problems 22-26
 - utility function for finding next lexographic permutation of a string
