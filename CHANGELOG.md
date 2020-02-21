@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog][6], and this project adheres to
 
 ## [Unreleased]
 ### Added
-- (nothing yet)
+- Solutions to problems 31-33
 
 ### Changed
 - (nothing yet)
